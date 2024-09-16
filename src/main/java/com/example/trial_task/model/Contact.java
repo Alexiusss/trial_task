@@ -18,4 +18,6 @@ public class Contact extends BaseEntity{
     private ContactType type;
 
     private String value;
+
+    private String clientId;
 }
