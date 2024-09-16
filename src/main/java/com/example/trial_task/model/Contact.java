@@ -19,5 +19,5 @@ public class Contact extends BaseEntity{
 
     private String value;
 
-    private String clientId;
+    private Integer clientId;
 }
