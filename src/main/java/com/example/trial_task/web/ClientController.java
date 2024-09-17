@@ -19,7 +19,7 @@ import java.util.List;
 public class ClientController {
     public static final String REST_URL = "/api/v1/clients";
     
-    private final ClientService clientService;
+    private final IClientService clientService;
 
     @PostMapping
     public ResponseEntity<ClientDTO> add(@RequestBody  @Valid ClientCreationDTO client) {

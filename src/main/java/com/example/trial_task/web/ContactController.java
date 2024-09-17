@@ -21,7 +21,7 @@ import java.util.Map;
 public class ContactController {
     public static final String REST_URL = "/api/v1/contacts";
 
-    private final ContactService contactService;
+    private final IContactService contactService;
 
     @PostMapping
     public ResponseEntity<ContactDTO> add(@RequestBody @Valid ContactCreationDTO contact) {
