@@ -45,7 +45,7 @@ public class ContactController {
     ) {
         ContactDTO created = contactService.create(contact, id);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path(REST_URL + "/{id}")
+                .path(REST_URL)
                 .buildAndExpand(created.id())
                 .toUri();
         return ResponseEntity.created(uriOfNewResource).body(created);
