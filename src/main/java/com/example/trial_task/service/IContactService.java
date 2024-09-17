@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface IContactService {
-    ContactDTO create(ContactCreationDTO client);
+    ContactDTO create(ContactCreationDTO client, Integer id);
 
     Map<ContactType, List<ContactDTO>> getAllByClientId(Integer clientId);
 

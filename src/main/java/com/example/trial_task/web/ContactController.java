@@ -19,7 +19,7 @@ import java.util.Map;
 @AllArgsConstructor
 @RequestMapping(path = ContactController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 public class ContactController {
-    public static final String REST_URL = "/api/v1/contacts";
+    public static final String REST_URL = "/api/v1/clients/{id}/contacts";
 
     private final IContactService contactService;
 

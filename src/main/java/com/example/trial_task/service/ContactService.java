@@ -33,8 +33,8 @@ public class ContactService implements IContactService {
      * @return the created {@link ContactDTO}.
      */
     @Override
-    public ContactDTO create(ContactCreationDTO contact) {
-        Client client = clientRepository.getExisted(contact.clientId());
+    public ContactDTO create(ContactCreationDTO contact, Integer clientId) {
+        Client client = clientRepository.getExisted(clientId);
         Contact created = contactRepository.save(convertFromDTO(contact, client));
         return convertToDTO(created);
     }

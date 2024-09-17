@@ -10,8 +10,6 @@ public record ContactCreationDTO(
         ContactType type,
         @NotBlank
         @Size(min = 2, max = 128)
-        String value,
-        @NotNull
-        Integer clientId
+        String value
 ) {
 }
