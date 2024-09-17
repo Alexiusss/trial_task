@@ -16,11 +16,11 @@ import java.time.LocalDateTime;
 @Access(AccessType.FIELD)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
-public class BaseEntity {
+public class BaseEntity implements HasId{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqGen")
-    @SequenceGenerator(name = "seqGen", allocationSize = 1)
+    @SequenceGenerator(name = "seqGen", sequenceName = "global_sequence", allocationSize = 1)
     private Integer id;
 
     @CreationTimestamp
